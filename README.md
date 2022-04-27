@@ -8,4 +8,4 @@
 * Predictive modelling
 
 
-![Sample (Doge)](https://github.com/ashioyajotham/FInancial-Analysis/blob/main/doge.jpg)
+![Sample](https://github.com/ashioyajotham/FInancial-Analysis/blob/main/doge.jpg)
