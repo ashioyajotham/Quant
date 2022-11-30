@@ -1,6 +1,16 @@
 # Financial-Analysis
 
 * My journey in analyzing the money markets/quant from stocks, major currencies like the dollar to crypto like BTC or Doge :)
+* Financial data is usually provided in a format that includes:
+
+           - Date
+           - Open price
+           - High price
+           - Low price
+           - Closing price
+           - Volume
+ * These data, often referred to as - [OHLC Chart Data](https://www.alpharithms.com/python-financial-data-491110/) - can be interpreted as `Time Series
+   Data`
 * Heavy work involves exploratory data analysis, feature engineering and data cleansing to visualize trends especially during certain periods like 9/11, the pandemic and US elections
 
 ### Pyscript
