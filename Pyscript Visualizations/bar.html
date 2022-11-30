@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PyScript Matpltlib Visualizations</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Linking pyscript CDN -->
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+        <py-env>
+            <!-- Load Matplotlib-->
+            - matplotlib
+        </py-env>
+    </head>
+    <body>
+        <div id="matplotlib-bar"></div>
+        <py-script output="matplotlib-bar">
+            # Python Code 
+            
+            # importing the matplotlib library
+            import matplotlib.pyplot as plt 
+
+            fig, ax = plt.subplots()
+
+            # x axis 
+            x = ["Python", "C++", "JavaScript", "Golang"] 
+
+            # y axis
+            y = [10, 5, 9, 7] 
+
+            plt.bar(x, y)
+
+            # Naming the x-label
+            plt.xlabel('Language')
+
+            # Naming the y-label
+            plt.ylabel('Score')
+
+            # Naming the title of the plot
+            plt.title('Language vs Score')
+
+            fig
+         </py-script>
+    </body>
+</html>
