@@ -17,7 +17,13 @@
 * As we all are aware, is an open source web framework that let's you run Python in the web browser. What many are also not aware, is that you can add Matplotlib visualizations with the help of pyscript-HTML
 * Credits: [makeuseofcode](https://github.com/makeuseofcode/PyScript-Matplotlib-Visualizations)
 
-# TODO
+
+###1: Crypto Forecasting
+* All credits goes to an acquaintance of mine [Nathan Waltz](https://datascience.aeolus.wsu.edu/nwaltz) :)
+
+* [OG Code](https://datascience.aeolus.wsu.edu/nwaltz/crypto-forecasting)
+
+######### TODO
 * Web scraping using financial APIs like Yahoo API
 * Predictive modelling
 
