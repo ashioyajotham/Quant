@@ -1,0 +1,1973 @@
+import math
+def sigmoid(x):
+    if x < 0.0:
+        z = math.exp(x)
+        return z / (1.0 + z)
+    return 1.0 / (1.0 + math.exp(-x))
+def score(input):
+    if input[25] >= 0.5:
+        if input[20] >= 0.5:
+            var0 = 0.15483871
+        else:
+            var0 = 0.42564106
+    else:
+        if input[26] >= 0.5:
+            if input[19] >= 0.5:
+                var0 = -0.2597015
+            else:
+                var0 = 0.17394137
+        else:
+            if input[2] >= 0.5:
+                var0 = -0.429535
+            else:
+                var0 = -0.5811159
+    if input[21] >= 0.5:
+        if input[35] >= 0.5:
+            if input[4] >= 0.23214287:
+                var1 = 0.2547528
+            else:
+                var1 = -0.27371418
+        else:
+            if input[6] >= 0.5:
+                var1 = 0.13260083
+            else:
+                var1 = 0.37562385
+    else:
+        if input[22] >= 0.5:
+            if input[0] >= 0.25:
+                var1 = 0.164411
+            else:
+                var1 = -0.24366282
+        else:
+            if input[20] >= 0.5:
+                var1 = -0.23847355
+            else:
+                var1 = -0.39613846
+    if input[2] >= 0.5:
+        if input[26] >= 0.5:
+            if input[4] >= 0.10119048:
+                var2 = 0.19530682
+            else:
+                var2 = -0.23954006
+        else:
+            if input[33] >= 0.5:
+                var2 = -0.111895874
+            else:
+                var2 = -0.27918705
+    else:
+        if input[4] >= 0.58928573:
+            if input[33] >= 0.5:
+                var2 = -0.19762345
+            else:
+                var2 = -0.3779092
+        else:
+            var2 = -0.39878866
+    if input[2] >= 0.5:
+        if input[25] >= 0.5:
+            if input[4] >= 0.19642857:
+                var3 = 0.37717262
+            else:
+                var3 = 0.10783757
+        else:
+            if input[26] >= 0.5:
+                var3 = 0.05442709
+            else:
+                var3 = -0.20370819
+    else:
+        if input[4] >= 0.6369047:
+            if input[33] >= 0.5:
+                var3 = -0.13652644
+            else:
+                var3 = -0.3427877
+        else:
+            var3 = -0.36015877
+    if input[2] >= 0.5:
+        if input[22] >= 0.5:
+            if input[7] >= 0.5:
+                var4 = 0.29106393
+            else:
+                var4 = 0.053855143
+        else:
+            if input[21] >= 0.5:
+                var4 = 0.131856
+            else:
+                var4 = -0.16745995
+    else:
+        if input[4] >= 0.75595236:
+            var4 = -0.22320186
+        else:
+            var4 = -0.32644376
+    if input[2] >= 0.5:
+        if input[4] >= 0.11309524:
+            if input[20] >= 0.5:
+                var5 = 0.15659148
+            else:
+                var5 = -0.11758141
+        else:
+            if input[4] >= 0.05357143:
+                var5 = -0.19733055
+            else:
+                var5 = -0.2964728
+    else:
+        if input[4] >= 0.58928573:
+            if input[33] >= 0.5:
+                var5 = -0.07831389
+            else:
+                var5 = -0.27305976
+        else:
+            var5 = -0.30715954
+    if input[33] >= 0.5:
+        if input[1] >= 0.5:
+            if input[4] >= 0.077380955:
+                var6 = 0.16651538
+            else:
+                var6 = -0.15170458
+        else:
+            if input[4] >= 0.2797619:
+                var6 = 0.03708402
+            else:
+                var6 = -0.15459697
+    else:
+        if input[21] >= 0.5:
+            if input[35] >= 0.5:
+                var6 = 0.025763554
+            else:
+                var6 = 0.37746105
+        else:
+            if input[22] >= 0.5:
+                var6 = 0.13056964
+            else:
+                var6 = -0.17649879
+    if input[2] >= 0.5:
+        if input[17] >= 0.5:
+            if input[3] >= 0.5:
+                var7 = -0.28051534
+            else:
+                var7 = -0.19841906
+        else:
+            if input[19] >= 0.5:
+                var7 = -0.11627347
+            else:
+                var7 = 0.056854926
+    else:
+        if input[20] >= 0.5:
+            if input[6] >= 0.5:
+                var7 = -0.22770058
+            else:
+                var7 = -0.09934979
+        else:
+            if input[4] >= 0.58928573:
+                var7 = -0.19251676
+            else:
+                var7 = -0.28546283
+    if input[7] >= 0.5:
+        if input[17] >= 0.5:
+            if input[4] >= 0.74404764:
+                var8 = -0.029737538
+            else:
+                var8 = -0.19807261
+        else:
+            if input[19] >= 0.5:
+                var8 = -0.04398887
+            else:
+                var8 = 0.15940961
+    else:
+        if input[22] >= 0.5:
+            if input[33] >= 0.5:
+                var8 = 0.17688622
+            else:
+                var8 = -0.013156301
+        else:
+            if input[21] >= 0.5:
+                var8 = 0.017089497
+            else:
+                var8 = -0.16534308
+    if input[4] >= 0.14880952:
+        if input[17] >= 0.5:
+            if input[5] >= 0.5:
+                var9 = -0.098190434
+            else:
+                var9 = -0.23488127
+        else:
+            if input[19] >= 0.5:
+                var9 = -0.034875598
+            else:
+                var9 = 0.12648344
+    else:
+        if input[4] >= 0.05357143:
+            if input[3] >= 0.3:
+                var9 = -0.16962922
+            else:
+                var9 = -0.06879269
+        else:
+            if input[33] >= 0.5:
+                var9 = -0.16186753
+            else:
+                var9 = -0.27647457
+    if input[2] >= 0.5:
+        if input[28] >= 0.5:
+            if input[1] >= 0.5:
+                var10 = -0.050317418
+            else:
+                var10 = -0.14398518
+        else:
+            if input[4] >= 0.077380955:
+                var10 = 0.044551894
+            else:
+                var10 = -0.15301535
+    else:
+        if input[0] >= 0.75:
+            if input[19] >= 0.5:
+                var10 = -0.20487224
+            else:
+                var10 = -0.040923353
+        else:
+            var10 = -0.25792253
+    if input[5] >= 0.5:
+        if input[28] >= 0.5:
+            if input[2] >= 0.5:
+                var11 = -0.058861706
+            else:
+                var11 = -0.26300648
+        else:
+            if input[33] >= 0.5:
+                var11 = 0.19686536
+            else:
+                var11 = 0.020401485
+    else:
+        if input[2] >= 0.5:
+            if input[4] >= 0.065476194:
+                var11 = -0.050265696
+            else:
+                var11 = -0.2027863
+        else:
+            if input[33] >= 0.5:
+                var11 = -0.104392774
+            else:
+                var11 = -0.2772171
+    if input[17] >= 0.5:
+        if input[4] >= 0.38690478:
+            if input[5] >= 0.5:
+                var12 = -0.039520092
+            else:
+                var12 = -0.14394377
+        else:
+            if input[1] >= 0.5:
+                var12 = -0.1439115
+            else:
+                var12 = -0.2555384
+    else:
+        if input[4] >= 0.08928572:
+            if input[19] >= 0.5:
+                var12 = -0.026828693
+            else:
+                var12 = 0.071301214
+        else:
+            if input[33] >= 0.5:
+                var12 = -0.0395788
+            else:
+                var12 = -0.17662346
+    if input[2] >= 0.5:
+        if input[21] >= 0.5:
+            if input[35] >= 0.5:
+                var13 = 0.017591953
+            else:
+                var13 = 0.23406003
+        else:
+            if input[5] >= 0.5:
+                var13 = 0.02253407
+            else:
+                var13 = -0.06290361
+    else:
+        if input[4] >= 0.58928573:
+            var13 = -0.044112258
+        else:
+            if input[0] >= 0.25:
+                var13 = -0.22169079
+            else:
+                var13 = -0.12608305
+    if input[2] >= 0.5:
+        if input[1] >= 0.5:
+            if input[35] >= 0.5:
+                var14 = -0.16225715
+            else:
+                var14 = 0.15326482
+        else:
+            if input[36] >= 0.5:
+                var14 = -0.23900063
+            else:
+                var14 = -0.014336892
+    else:
+        if input[33] >= 0.5:
+            if input[4] >= 0.33928573:
+                var14 = 0.024813637
+            else:
+                var14 = -0.14557795
+        else:
+            if input[3] >= 0.3:
+                var14 = -0.15112165
+            else:
+                var14 = -0.25315183
+    if input[28] >= 0.5:
+        if input[5] >= 0.5:
+            if input[4] >= 0.42261904:
+                var15 = -0.18009512
+            else:
+                var15 = -0.03953996
+        else:
+            if input[4] >= 0.14880952:
+                var15 = -0.11682391
+            else:
+                var15 = -0.20079456
+    else:
+        if input[14] >= 0.5:
+            if input[36] >= 0.5:
+                var15 = -0.12068178
+            else:
+                var15 = 0.0756922
+        else:
+            if input[26] >= 0.5:
+                var15 = 0.1213083
+            else:
+                var15 = -0.06197256
+    if input[25] >= 0.5:
+        if input[4] >= 0.2797619:
+            var16 = 0.31346262
+        else:
+            var16 = 0.10860417
+    else:
+        if input[30] >= 0.5:
+            if input[1] >= 0.5:
+                var16 = 0.27167514
+            else:
+                var16 = -0.04179877
+        else:
+            if input[32] >= 0.5:
+                var16 = 0.036682718
+            else:
+                var16 = -0.04195296
+    if input[4] >= 0.13690478:
+        if input[4] >= 0.7083334:
+            var17 = 0.19926126
+        else:
+            if input[17] >= 0.5:
+                var17 = -0.08650202
+            else:
+                var17 = 0.015479647
+    else:
+        if input[4] >= 0.029761907:
+            if input[0] >= 0.25:
+                var17 = -0.08830413
+            else:
+                var17 = 0.022175139
+        else:
+            if input[1] >= 0.5:
+                var17 = -0.07404262
+            else:
+                var17 = -0.2643643
+    if input[32] >= 0.5:
+        if input[0] >= 0.25:
+            if input[33] >= 0.5:
+                var18 = 0.12618506
+            else:
+                var18 = -0.08704331
+        else:
+            if input[19] >= 0.5:
+                var18 = 0.550466
+            else:
+                var18 = 0.23950164
+    else:
+        if input[4] >= 0.39880952:
+            if input[30] >= 0.5:
+                var18 = 0.2547411
+            else:
+                var18 = 0.030467127
+        else:
+            if input[5] >= 0.5:
+                var18 = -0.0033889676
+            else:
+                var18 = -0.084415615
+    if input[29] >= 0.5:
+        var19 = -0.23046191
+    else:
+        if input[21] >= 0.5:
+            if input[4] >= 0.375:
+                var19 = 0.24509542
+            else:
+                var19 = 0.0855092
+        else:
+            if input[4] >= 0.17261904:
+                var19 = 0.015280784
+            else:
+                var19 = -0.05230353
+    if input[4] >= 0.017857144:
+        if input[36] >= 0.5:
+            if input[1] >= 0.5:
+                var20 = 0.008703159
+            else:
+                var20 = -0.17724848
+        else:
+            if input[30] >= 0.5:
+                var20 = 0.19226304
+            else:
+                var20 = 0.002439666
+    else:
+        var20 = -0.22492999
+    if input[17] >= 0.5:
+        if input[4] >= 0.6369047:
+            var21 = 0.065932944
+        else:
+            if input[0] >= 0.75:
+                var21 = -0.21393842
+            else:
+                var21 = -0.10243646
+    else:
+        if input[7] >= 0.5:
+            if input[5] >= 0.5:
+                var21 = 0.052101027
+            else:
+                var21 = -0.017300796
+        else:
+            if input[14] >= 0.5:
+                var21 = 0.011372127
+            else:
+                var21 = -0.060095806
+    if input[25] >= 0.5:
+        if input[1] >= 0.5:
+            var22 = 0.23058443
+        else:
+            var22 = 0.084053494
+    else:
+        if input[2] >= 0.5:
+            if input[24] >= 0.5:
+                var22 = -0.05310365
+            else:
+                var22 = 0.00598169
+        else:
+            if input[35] >= 0.5:
+                var22 = -0.2072412
+            else:
+                var22 = -0.06614281
+    if input[1] >= 0.5:
+        if input[0] >= 0.25:
+            if input[0] >= 0.75:
+                var23 = 0.027066788
+            else:
+                var23 = -0.09782098
+        else:
+            if input[11] >= 0.5:
+                var23 = 0.12844571
+            else:
+                var23 = 0.27031365
+    else:
+        if input[35] >= 0.5:
+            if input[4] >= 0.1607143:
+                var23 = 0.22522898
+            else:
+                var23 = 0.03905206
+        else:
+            if input[32] >= 0.5:
+                var23 = 0.025089143
+            else:
+                var23 = -0.051389486
+    if input[28] >= 0.5:
+        if input[4] >= 0.26785713:
+            if input[14] >= 0.5:
+                var24 = -0.16185495
+            else:
+                var24 = -0.010391289
+        else:
+            if input[4] >= 0.17261904:
+                var24 = 0.07488575
+            else:
+                var24 = -0.091239825
+    else:
+        if input[31] >= 0.5:
+            if input[0] >= 0.25:
+                var24 = -0.09485457
+            else:
+                var24 = 0.057958182
+        else:
+            if input[3] >= 0.3:
+                var24 = 0.035488274
+            else:
+                var24 = -0.008436507
+    if input[5] >= 0.5:
+        if input[31] >= 0.5:
+            var25 = -0.117740996
+        else:
+            if input[32] >= 0.5:
+                var25 = -0.020351624
+            else:
+                var25 = 0.04208788
+    else:
+        if input[28] >= 0.5:
+            if input[4] >= 0.2559524:
+                var25 = -0.16733591
+            else:
+                var25 = -0.05068334
+        else:
+            if input[24] >= 0.5:
+                var25 = -0.06719588
+            else:
+                var25 = 0.0054127695
+    if input[33] >= 0.5:
+        if input[3] >= 0.5:
+            if input[4] >= 0.13690478:
+                var26 = -0.06758881
+            else:
+                var26 = 0.117209084
+        else:
+            if input[16] >= 0.5:
+                var26 = 0.22969967
+            else:
+                var26 = 0.04743815
+    else:
+        if input[26] >= 0.5:
+            if input[1] >= 0.5:
+                var26 = 0.18821976
+            else:
+                var26 = 0.03853862
+        else:
+            if input[0] >= 0.25:
+                var26 = -0.078607224
+            else:
+                var26 = 0.00045228508
+    if input[4] >= 0.5297619:
+        if input[4] >= 0.7678572:
+            var27 = -0.08819945
+        else:
+            if input[33] >= 0.5:
+                var27 = 0.126143
+            else:
+                var27 = 0.031149214
+    else:
+        if input[4] >= 0.5178572:
+            var27 = -0.14896117
+        else:
+            if input[35] >= 0.5:
+                var27 = -0.041540455
+            else:
+                var27 = 0.0023500144
+    if input[21] >= 0.5:
+        if input[4] >= 0.10119048:
+            if input[4] >= 0.22023809:
+                var28 = 0.115233414
+            else:
+                var28 = -0.03918117
+        else:
+            var28 = 0.2661387
+    else:
+        if input[4] >= 0.17261904:
+            if input[5] >= 0.5:
+                var28 = 0.040430557
+            else:
+                var28 = -0.022259533
+        else:
+            if input[19] >= 0.5:
+                var28 = -0.085834615
+            else:
+                var28 = -0.0160748
+    if input[4] >= 0.5178572:
+        if input[32] >= 0.5:
+            var29 = -0.17364785
+        else:
+            if input[3] >= 0.5:
+                var29 = -0.15270351
+            else:
+                var29 = -0.0016273524
+    else:
+        if input[32] >= 0.5:
+            if input[0] >= 0.25:
+                var29 = 0.021345258
+            else:
+                var29 = 0.17635408
+        else:
+            if input[4] >= 0.4702381:
+                var29 = 0.13169387
+            else:
+                var29 = -0.01601179
+    if input[21] >= 0.5:
+        if input[1] >= 0.5:
+            if input[11] >= 0.5:
+                var30 = -0.041116804
+            else:
+                var30 = 0.07491721
+        else:
+            if input[3] >= 0.3:
+                var30 = 0.027661135
+            else:
+                var30 = 0.24364693
+    else:
+        if input[9] >= 0.5:
+            if input[20] >= 0.5:
+                var30 = -0.03711917
+            else:
+                var30 = -0.18600851
+        else:
+            if input[4] >= 0.029761907:
+                var30 = 0.004453911
+            else:
+                var30 = -0.13148509
+    if input[4] >= 0.74404764:
+        var31 = 0.18124835
+    else:
+        if input[24] >= 0.5:
+            if input[1] >= 0.5:
+                var31 = 0.04519181
+            else:
+                var31 = -0.044442736
+        else:
+            if input[0] >= 0.25:
+                var31 = -0.0065033636
+            else:
+                var31 = 0.038424738
+    if input[36] >= 0.5:
+        if input[1] >= 0.5:
+            if input[4] >= 0.22023809:
+                var32 = 0.16943508
+            else:
+                var32 = -0.08415777
+        else:
+            if input[32] >= 0.5:
+                var32 = -0.17997447
+            else:
+                var32 = -0.04966711
+    else:
+        if input[30] >= 0.5:
+            if input[4] >= 0.20833334:
+                var32 = 0.1832713
+            else:
+                var32 = -0.025846636
+        else:
+            if input[0] >= 0.75:
+                var32 = 0.027818115
+            else:
+                var32 = -0.007830261
+    if input[11] >= 0.5:
+        if input[20] >= 0.5:
+            if input[4] >= 0.33928573:
+                var33 = -0.073826276
+            else:
+                var33 = 0.13111769
+        else:
+            if input[31] >= 0.5:
+                var33 = -0.122523345
+            else:
+                var33 = 0.03695276
+    else:
+        if input[1] >= 0.5:
+            if input[0] >= 0.25:
+                var33 = -0.015610235
+            else:
+                var33 = 0.13870479
+        else:
+            if input[35] >= 0.5:
+                var33 = 0.1254896
+            else:
+                var33 = -0.039070126
+    if input[12] >= 0.5:
+        if input[28] >= 0.5:
+            var34 = -0.008502491
+        else:
+            if input[3] >= 0.3:
+                var34 = -0.20937331
+            else:
+                var34 = -0.07464811
+    else:
+        if input[3] >= 0.5:
+            if input[17] >= 0.5:
+                var34 = -0.06962861
+            else:
+                var34 = 0.031704422
+        else:
+            if input[4] >= 0.66071427:
+                var34 = 0.09185192
+            else:
+                var34 = -0.02059399
+    if input[17] >= 0.5:
+        if input[3] >= 0.9:
+            var35 = 0.028843429
+        else:
+            if input[1] >= 0.5:
+                var35 = -0.02270354
+            else:
+                var35 = -0.10195502
+    else:
+        if input[4] >= 0.64880955:
+            if input[24] >= 0.5:
+                var35 = 0.23910712
+            else:
+                var35 = -0.019184254
+        else:
+            if input[4] >= 0.5654762:
+                var35 = -0.12254296
+            else:
+                var35 = -0.00018781604
+    if input[4] >= 0.029761907:
+        if input[4] >= 0.11309524:
+            if input[16] >= 0.5:
+                var36 = 0.047254864
+            else:
+                var36 = -0.010436826
+        else:
+            if input[3] >= 0.1:
+                var36 = 0.01732997
+            else:
+                var36 = 0.15964927
+    else:
+        var36 = -0.1280165
+    if input[31] >= 0.5:
+        if input[4] >= 0.4702381:
+            var37 = 0.040403336
+        else:
+            if input[4] >= 0.24404761:
+                var37 = -0.21274702
+            else:
+                var37 = -0.062389597
+    else:
+        if input[32] >= 0.5:
+            if input[33] >= 0.5:
+                var37 = 0.10935304
+            else:
+                var37 = -0.0017205124
+        else:
+            if input[1] >= 0.5:
+                var37 = 0.019839078
+            else:
+                var37 = -0.021603411
+    if input[28] >= 0.5:
+        if input[0] >= 0.25:
+            if input[19] >= 0.5:
+                var38 = -0.031186258
+            else:
+                var38 = -0.13004479
+        else:
+            if input[1] >= 0.5:
+                var38 = 0.14427234
+            else:
+                var38 = -0.016657142
+    else:
+        if input[4] >= 0.26785713:
+            if input[4] >= 0.2797619:
+                var38 = -0.00021386183
+            else:
+                var38 = -0.18266055
+        else:
+            if input[26] >= 0.5:
+                var38 = 0.09425863
+            else:
+                var38 = 0.021957064
+    if input[4] >= 0.10119048:
+        if input[4] >= 0.69642854:
+            if input[0] >= 0.75:
+                var39 = 0.014107712
+            else:
+                var39 = -0.15641199
+        else:
+            if input[4] >= 0.5297619:
+                var39 = 0.07977178
+            else:
+                var39 = 0.002390569
+    else:
+        if input[33] >= 0.5:
+            if input[20] >= 0.5:
+                var39 = -0.08667229
+            else:
+                var39 = 0.117674716
+        else:
+            if input[14] >= 0.5:
+                var39 = -0.19803074
+            else:
+                var39 = -0.06230748
+    if input[24] >= 0.5:
+        if input[4] >= 0.69642854:
+            var40 = -0.16526505
+        else:
+            if input[5] >= 0.5:
+                var40 = 0.013328698
+            else:
+                var40 = -0.045955233
+    else:
+        if input[22] >= 0.5:
+            if input[14] >= 0.5:
+                var40 = -0.008478064
+            else:
+                var40 = 0.1822728
+        else:
+            if input[0] >= 0.25:
+                var40 = -0.012454439
+            else:
+                var40 = 0.048432086
+    if input[3] >= 0.70000005:
+        if input[4] >= 0.4583333:
+            if input[3] >= 0.9:
+                var41 = 0.18452653
+            else:
+                var41 = -0.048416182
+        else:
+            if input[4] >= 0.2559524:
+                var41 = -0.086824164
+            else:
+                var41 = -0.009510126
+    else:
+        if input[4] >= 0.05357143:
+            if input[26] >= 0.5:
+                var41 = -0.05728359
+            else:
+                var41 = 0.008585647
+        else:
+            if input[20] >= 0.5:
+                var41 = 0.14365016
+            else:
+                var41 = 0.04479845
+    if input[5] >= 0.5:
+        if input[16] >= 0.5:
+            var42 = -0.16390389
+        else:
+            if input[4] >= 0.125:
+                var42 = 0.035442565
+            else:
+                var42 = -0.03452013
+    else:
+        if input[7] >= 0.5:
+            if input[19] >= 0.5:
+                var42 = -0.0098080095
+            else:
+                var42 = -0.108838975
+        else:
+            if input[4] >= 0.50595236:
+                var42 = 0.18710414
+            else:
+                var42 = -0.015492144
+    if input[31] >= 0.5:
+        if input[20] >= 0.5:
+            if input[4] >= 0.10119048:
+                var43 = 0.13489573
+            else:
+                var43 = -0.13906462
+        else:
+            if input[0] >= 0.75:
+                var43 = -0.051149964
+            else:
+                var43 = -0.14258355
+    else:
+        if input[36] >= 0.5:
+            if input[1] >= 0.5:
+                var43 = 0.021584474
+            else:
+                var43 = -0.11110535
+        else:
+            if input[4] >= 0.23214287:
+                var43 = 0.032830656
+            else:
+                var43 = -0.000707369
+    if input[4] >= 0.4940476:
+        if input[15] >= 0.5:
+            var44 = 0.10646341
+        else:
+            if input[4] >= 0.66071427:
+                var44 = 0.014565649
+            else:
+                var44 = -0.09232349
+    else:
+        if input[16] >= 0.5:
+            if input[19] >= 0.5:
+                var44 = 0.033110652
+            else:
+                var44 = 0.1334818
+        else:
+            if input[17] >= 0.5:
+                var44 = -0.09581435
+            else:
+                var44 = -0.0026031532
+    var45 = var0 + var1 + var2 + var3 + var4 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12 + var13 + var14 + var15 + var16 + var17 + var18 + var19 + var20 + var21 + var22 + var23 + var24 + var25 + var26 + var27 + var28 + var29 + var30 + var31 + var32 + var33 + var34 + var35 + var36 + var37 + var38 + var39 + var40 + var41 + var42 + var43 + var44
+    if input[4] >= 0.10119048:
+        if input[4] >= 0.5297619:
+            if input[4] >= 0.5654762:
+                var46 = 0.0054157693
+            else:
+                var46 = 0.22158495
+        else:
+            if input[22] >= 0.5:
+                var46 = 0.037432
+            else:
+                var46 = -0.026667833
+    else:
+        if input[35] >= 0.5:
+            if input[3] >= 0.1:
+                var46 = -0.15876304
+            else:
+                var46 = 0.071950644
+        else:
+            if input[5] >= 0.5:
+                var46 = 0.14447248
+            else:
+                var46 = 0.026963701
+    if input[28] >= 0.5:
+        if input[35] >= 0.5:
+            if input[1] >= 0.5:
+                var47 = -0.20556322
+            else:
+                var47 = -0.007718327
+        else:
+            if input[1] >= 0.5:
+                var47 = 0.04306214
+            else:
+                var47 = -0.042369865
+    else:
+        if input[1] >= 0.5:
+            if input[0] >= 0.25:
+                var47 = -0.024291039
+            else:
+                var47 = 0.055327922
+        else:
+            if input[0] >= 0.25:
+                var47 = 0.07462424
+            else:
+                var47 = -0.007364803
+    if input[11] >= 0.5:
+        if input[4] >= 0.2916667:
+            if input[4] >= 0.36309522:
+                var48 = 0.0025729379
+            else:
+                var48 = -0.12551947
+        else:
+            if input[33] >= 0.5:
+                var48 = 0.12430248
+            else:
+                var48 = 0.020601645
+    else:
+        if input[25] >= 0.5:
+            var48 = 0.067528866
+        else:
+            if input[3] >= 0.9:
+                var48 = 0.0069104186
+            else:
+                var48 = -0.027405117
+    if input[16] >= 0.5:
+        if input[4] >= 0.5178572:
+            if input[4] >= 0.6369047:
+                var49 = 0.05308283
+            else:
+                var49 = -0.11943569
+        else:
+            if input[1] >= 0.5:
+                var49 = 0.022338046
+            else:
+                var49 = 0.16812564
+    else:
+        if input[12] >= 0.5:
+            if input[0] >= 0.75:
+                var49 = 0.17356426
+            else:
+                var49 = -0.032893717
+        else:
+            if input[32] >= 0.5:
+                var49 = 0.00578271
+            else:
+                var49 = -0.030894274
+    if input[2] >= 0.5:
+        if input[4] >= 0.43452382:
+            if input[5] >= 0.5:
+                var50 = 0.009126062
+            else:
+                var50 = 0.091110386
+        else:
+            if input[5] >= 0.5:
+                var50 = 0.016992226
+            else:
+                var50 = -0.022050349
+    else:
+        if input[4] >= 0.22023809:
+            if input[3] >= 0.3:
+                var50 = -0.022439817
+            else:
+                var50 = -0.18821949
+        else:
+            var50 = 0.056132317
+    if input[24] >= 0.5:
+        if input[19] >= 0.5:
+            if input[7] >= 0.5:
+                var51 = 0.05900944
+            else:
+                var51 = -0.07553697
+        else:
+            if input[3] >= 0.9:
+                var51 = -0.16711073
+            else:
+                var51 = -0.024857309
+    else:
+        if input[16] >= 0.5:
+            if input[33] >= 0.5:
+                var51 = 0.066217214
+            else:
+                var51 = -0.12218664
+        else:
+            if input[4] >= 0.67261904:
+                var51 = -0.11489513
+            else:
+                var51 = 0.02506218
+    if input[4] >= 0.30357143:
+        if input[4] >= 0.31547618:
+            if input[3] >= 0.3:
+                var52 = 0.03229561
+            else:
+                var52 = -0.018815964
+        else:
+            if input[3] >= 0.5:
+                var52 = 0.10995236
+            else:
+                var52 = 0.25990024
+    else:
+        if input[4] >= 0.2916667:
+            var52 = -0.14678948
+        else:
+            if input[4] >= 0.2797619:
+                var52 = 0.055030953
+            else:
+                var52 = -0.024028359
+    if input[0] >= 0.75:
+        if input[4] >= 0.077380955:
+            if input[3] >= 0.5:
+                var53 = -0.065979734
+            else:
+                var53 = -0.001367408
+        else:
+            if input[20] >= 0.5:
+                var53 = 0.19774887
+            else:
+                var53 = -0.009031403
+    else:
+        if input[3] >= 0.1:
+            if input[22] >= 0.5:
+                var53 = -0.112085596
+            else:
+                var53 = 0.030616986
+        else:
+            if input[26] >= 0.5:
+                var53 = 0.11690963
+            else:
+                var53 = -0.047688078
+    if input[5] >= 0.5:
+        if input[20] >= 0.5:
+            if input[26] >= 0.5:
+                var54 = -0.28544244
+            else:
+                var54 = 0.021251716
+        else:
+            if input[3] >= 0.70000005:
+                var54 = 0.097973995
+            else:
+                var54 = 0.03391309
+    else:
+        if input[3] >= 0.1:
+            if input[20] >= 0.5:
+                var54 = 0.054357864
+            else:
+                var54 = -0.008793401
+        else:
+            if input[1] >= 0.5:
+                var54 = -0.113083534
+            else:
+                var54 = -0.0044076866
+    if input[35] >= 0.5:
+        if input[11] >= 0.5:
+            if input[1] >= 0.5:
+                var55 = -0.18021636
+            else:
+                var55 = -0.0023439943
+        else:
+            if input[5] >= 0.5:
+                var55 = 0.027123421
+            else:
+                var55 = 0.19357407
+    else:
+        if input[11] >= 0.5:
+            if input[4] >= 0.17261904:
+                var55 = -0.0076154945
+            else:
+                var55 = 0.07993776
+        else:
+            if input[2] >= 0.5:
+                var55 = -0.030897709
+            else:
+                var55 = 0.08190786
+    if input[3] >= 0.9:
+        if input[30] >= 0.5:
+            var56 = 0.26265156
+        else:
+            if input[4] >= 0.13690478:
+                var56 = 0.046997458
+            else:
+                var56 = -0.10612013
+    else:
+        if input[4] >= 0.13690478:
+            if input[4] >= 0.48214287:
+                var56 = 0.023066178
+            else:
+                var56 = -0.025864538
+        else:
+            if input[4] >= 0.065476194:
+                var56 = 0.054036167
+            else:
+                var56 = -0.030303942
+    if input[7] >= 0.5:
+        if input[17] >= 0.5:
+            if input[4] >= 0.60119045:
+                var57 = -0.024987563
+            else:
+                var57 = 0.14991972
+        else:
+            if input[31] >= 0.5:
+                var57 = -0.113476045
+            else:
+                var57 = 0.0077186828
+    else:
+        if input[30] >= 0.5:
+            if input[4] >= 0.125:
+                var57 = 0.11561812
+            else:
+                var57 = 0.014016527
+        else:
+            if input[3] >= 0.3:
+                var57 = -0.048842385
+            else:
+                var57 = 0.0036264183
+    if input[15] >= 0.5:
+        if input[20] >= 0.5:
+            if input[33] >= 0.5:
+                var58 = -0.1084601
+            else:
+                var58 = 0.026099361
+        else:
+            if input[1] >= 0.5:
+                var58 = 0.014837773
+            else:
+                var58 = 0.10484828
+    else:
+        if input[4] >= 0.065476194:
+            if input[20] >= 0.5:
+                var58 = 0.019091701
+            else:
+                var58 = -0.02152717
+        else:
+            var58 = -0.13945289
+    if input[4] >= 0.75595236:
+        var59 = 0.10458369
+    else:
+        if input[4] >= 0.69642854:
+            var59 = -0.17299296
+        else:
+            if input[16] >= 0.5:
+                var59 = -0.064336024
+            else:
+                var59 = 0.0046261162
+    if input[4] >= 0.7797619:
+        var60 = -0.16455548
+    else:
+        if input[1] >= 0.5:
+            if input[35] >= 0.5:
+                var60 = -0.05648975
+            else:
+                var60 = 0.051386066
+        else:
+            if input[35] >= 0.5:
+                var60 = 0.07220144
+            else:
+                var60 = -0.01523573
+    if input[16] >= 0.5:
+        if input[32] >= 0.5:
+            var61 = -0.06298728
+        else:
+            if input[4] >= 0.5654762:
+                var61 = -0.012341538
+            else:
+                var61 = 0.15110013
+    else:
+        if input[7] >= 0.5:
+            if input[4] >= 0.13690478:
+                var61 = -0.026106346
+            else:
+                var61 = 0.063739195
+        else:
+            if input[3] >= 0.3:
+                var61 = 0.038591903
+            else:
+                var61 = -0.0118607925
+    if input[5] >= 0.5:
+        if input[3] >= 0.5:
+            if input[4] >= 0.2916667:
+                var62 = -0.03260942
+            else:
+                var62 = 0.07409398
+        else:
+            if input[26] >= 0.5:
+                var62 = -0.13839953
+            else:
+                var62 = -0.01687175
+    else:
+        if input[4] >= 0.05357143:
+            if input[4] >= 0.55357146:
+                var62 = 0.09138933
+            else:
+                var62 = 0.011926363
+        else:
+            var62 = 0.11654052
+    if input[4] >= 0.125:
+        if input[4] >= 0.4940476:
+            if input[4] >= 0.5416666:
+                var63 = -0.00562644
+            else:
+                var63 = -0.10756143
+        else:
+            if input[4] >= 0.4702381:
+                var63 = 0.14842169
+            else:
+                var63 = 0.014345755
+    else:
+        if input[3] >= 0.1:
+            if input[5] >= 0.5:
+                var63 = -0.09845757
+            else:
+                var63 = -0.039346755
+        else:
+            if input[32] >= 0.5:
+                var63 = -0.1375188
+            else:
+                var63 = 0.05183394
+    if input[33] >= 0.5:
+        if input[4] >= 0.10119048:
+            if input[3] >= 0.5:
+                var64 = -0.08111017
+            else:
+                var64 = -0.020621844
+        else:
+            if input[5] >= 0.5:
+                var64 = -0.025134362
+            else:
+                var64 = 0.11490853
+    else:
+        if input[4] >= 0.05357143:
+            if input[11] >= 0.5:
+                var64 = -0.022272065
+            else:
+                var64 = 0.021301897
+        else:
+            if input[1] >= 0.5:
+                var64 = -0.032615572
+            else:
+                var64 = -0.15157472
+    if input[4] >= 0.7797619:
+        var65 = -0.12692922
+    else:
+        if input[4] >= 0.7083334:
+            var65 = 0.12139576
+        else:
+            if input[26] >= 0.5:
+                var65 = 0.04649439
+            else:
+                var65 = -0.0064847576
+    if input[14] >= 0.5:
+        if input[4] >= 0.36309522:
+            if input[19] >= 0.5:
+                var66 = 0.010680664
+            else:
+                var66 = 0.06890945
+        else:
+            if input[4] >= 0.32738096:
+                var66 = -0.07853963
+            else:
+                var66 = 0.0018563495
+    else:
+        if input[2] >= 0.5:
+            if input[30] >= 0.5:
+                var66 = 0.08294358
+            else:
+                var66 = -0.02333045
+        else:
+            if input[3] >= 0.3:
+                var66 = -0.04940156
+            else:
+                var66 = -0.20859472
+    if input[1] >= 0.5:
+        if input[3] >= 0.5:
+            if input[4] >= 0.14880952:
+                var67 = 0.06900664
+            else:
+                var67 = -0.06397184
+        else:
+            if input[6] >= 0.5:
+                var67 = 0.09447743
+            else:
+                var67 = -0.038641535
+    else:
+        if input[22] >= 0.5:
+            if input[5] >= 0.5:
+                var67 = 0.20519522
+            else:
+                var67 = 0.02231891
+        else:
+            if input[19] >= 0.5:
+                var67 = 0.045178108
+            else:
+                var67 = -0.004277154
+    if input[10] >= 0.5:
+        if input[15] >= 0.5:
+            var68 = 0.030342074
+        else:
+            var68 = -0.23020796
+    else:
+        if input[3] >= 0.3:
+            if input[15] >= 0.5:
+                var68 = -0.06158863
+            else:
+                var68 = 0.0014864583
+        else:
+            if input[33] >= 0.5:
+                var68 = 0.06479971
+            else:
+                var68 = -0.0010307903
+    if input[25] >= 0.5:
+        if input[4] >= 0.24404761:
+            var69 = -0.23198642
+        else:
+            var69 = -0.025604576
+    else:
+        if input[21] >= 0.5:
+            if input[28] >= 0.5:
+                var69 = 0.19587673
+            else:
+                var69 = 0.011953683
+        else:
+            if input[4] >= 0.36309522:
+                var69 = -0.022725059
+            else:
+                var69 = 0.0041041654
+    if input[4] >= 0.08928572:
+        if input[35] >= 0.5:
+            if input[28] >= 0.5:
+                var70 = -0.102226995
+            else:
+                var70 = 0.05931252
+        else:
+            if input[28] >= 0.5:
+                var70 = 0.02556536
+            else:
+                var70 = -0.034411687
+    else:
+        if input[3] >= 0.3:
+            if input[3] >= 0.9:
+                var70 = -0.025998967
+            else:
+                var70 = 0.12432993
+        else:
+            if input[33] >= 0.5:
+                var70 = 0.096074514
+            else:
+                var70 = -0.05333942
+    if input[22] >= 0.5:
+        if input[4] >= 0.2559524:
+            if input[1] >= 0.5:
+                var71 = -0.022258874
+            else:
+                var71 = -0.22958522
+        else:
+            if input[3] >= 0.1:
+                var71 = -0.041202366
+            else:
+                var71 = 0.07630619
+    else:
+        if input[3] >= 0.5:
+            if input[14] >= 0.5:
+                var71 = 0.033847768
+            else:
+                var71 = -0.046533413
+        else:
+            if input[4] >= 0.13690478:
+                var71 = -0.03157958
+            else:
+                var71 = 0.016388837
+    if input[4] >= 0.13690478:
+        if input[4] >= 0.19642857:
+            if input[28] >= 0.5:
+                var72 = -0.039568502
+            else:
+                var72 = 0.010835586
+        else:
+            if input[21] >= 0.5:
+                var72 = -0.0775623
+            else:
+                var72 = 0.06254302
+    else:
+        if input[3] >= 0.9:
+            var72 = -0.14129049
+        else:
+            if input[26] >= 0.5:
+                var72 = 0.052372646
+            else:
+                var72 = -0.025843227
+    if input[6] >= 0.5:
+        if input[4] >= 0.1607143:
+            var73 = -0.081405684
+        else:
+            if input[4] >= 0.077380955:
+                var73 = 0.16216725
+            else:
+                var73 = 0.03178697
+    else:
+        if input[30] >= 0.5:
+            if input[3] >= 0.70000005:
+                var73 = 0.022182716
+            else:
+                var73 = -0.12390011
+        else:
+            if input[3] >= 0.1:
+                var73 = -0.00024161459
+            else:
+                var73 = -0.03157492
+    if input[31] >= 0.5:
+        if input[0] >= 0.25:
+            if input[4] >= 0.14880952:
+                var74 = -0.14583533
+            else:
+                var74 = -0.048273984
+        else:
+            if input[14] >= 0.5:
+                var74 = 0.26001516
+            else:
+                var74 = -0.13164799
+    else:
+        if input[4] >= 0.08928572:
+            if input[3] >= 0.70000005:
+                var74 = -0.041150916
+            else:
+                var74 = 0.0056828936
+        else:
+            if input[1] >= 0.5:
+                var74 = 0.12434157
+            else:
+                var74 = 0.012240056
+    if input[4] >= 0.75595236:
+        var75 = 0.106124654
+    else:
+        if input[22] >= 0.5:
+            if input[14] >= 0.5:
+                var75 = -0.0032630926
+            else:
+                var75 = 0.099022694
+        else:
+            if input[10] >= 0.5:
+                var75 = 0.06117364
+            else:
+                var75 = -0.01526687
+    if input[33] >= 0.5:
+        if input[20] >= 0.5:
+            if input[4] >= 0.065476194:
+                var76 = -0.025656445
+            else:
+                var76 = 0.15983073
+        else:
+            if input[16] >= 0.5:
+                var76 = 0.18881103
+            else:
+                var76 = 0.042898588
+    else:
+        if input[19] >= 0.5:
+            if input[4] >= 0.23214287:
+                var76 = -0.012304728
+            else:
+                var76 = -0.060358096
+        else:
+            if input[4] >= 0.38690478:
+                var76 = 0.08879918
+            else:
+                var76 = -0.010211066
+    if input[16] >= 0.5:
+        if input[19] >= 0.5:
+            if input[4] >= 0.42261904:
+                var77 = -0.1439188
+            else:
+                var77 = -0.04757114
+        else:
+            if input[33] >= 0.5:
+                var77 = 0.09609629
+            else:
+                var77 = -0.02652967
+    else:
+        if input[4] >= 0.23214287:
+            if input[15] >= 0.5:
+                var77 = 0.07688305
+            else:
+                var77 = 0.0074370373
+        else:
+            if input[3] >= 0.70000005:
+                var77 = 0.044427916
+            else:
+                var77 = -0.02121711
+    if input[14] >= 0.5:
+        if input[3] >= 0.9:
+            if input[4] >= 0.20833334:
+                var78 = -0.008137833
+            else:
+                var78 = -0.14489546
+        else:
+            if input[4] >= 0.7083334:
+                var78 = 0.16892561
+            else:
+                var78 = 0.02798955
+    else:
+        if input[36] >= 0.5:
+            var78 = 0.116719626
+        else:
+            if input[9] >= 0.5:
+                var78 = -0.14238672
+            else:
+                var78 = -0.008163772
+    if input[26] >= 0.5:
+        if input[35] >= 0.5:
+            var79 = 0.09588162
+        else:
+            if input[4] >= 0.2916667:
+                var79 = -0.24783818
+            else:
+                var79 = -0.06427686
+    else:
+        if input[4] >= 0.7202381:
+            if input[14] >= 0.5:
+                var79 = -0.18720278
+            else:
+                var79 = 0.027746407
+        else:
+            if input[4] >= 0.6369047:
+                var79 = 0.08489463
+            else:
+                var79 = -0.0044090613
+    if input[22] >= 0.5:
+        if input[0] >= 0.25:
+            if input[11] >= 0.5:
+                var80 = 0.107786976
+            else:
+                var80 = -0.051257443
+        else:
+            var80 = -0.1872172
+    else:
+        if input[12] >= 0.5:
+            if input[4] >= 0.22023809:
+                var80 = -0.09774217
+            else:
+                var80 = 0.0020247847
+        else:
+            if input[17] >= 0.5:
+                var80 = -0.028636185
+            else:
+                var80 = 0.024563137
+    if input[4] >= 0.7202381:
+        var81 = -0.10658168
+    else:
+        if input[4] >= 0.66071427:
+            var81 = 0.116479166
+        else:
+            if input[24] >= 0.5:
+                var81 = 0.02208367
+            else:
+                var81 = -0.009462014
+    if input[0] >= 0.75:
+        if input[20] >= 0.5:
+            if input[32] >= 0.5:
+                var82 = 0.03289977
+            else:
+                var82 = -0.112773426
+        else:
+            if input[4] >= 0.1607143:
+                var82 = 0.021706948
+            else:
+                var82 = -0.06205234
+    else:
+        if input[12] >= 0.5:
+            if input[5] >= 0.5:
+                var82 = -0.18311498
+            else:
+                var82 = 0.03170074
+        else:
+            if input[4] >= 0.125:
+                var82 = 0.006551521
+            else:
+                var82 = 0.05254203
+    if input[4] >= 0.041666668:
+        if input[4] >= 0.077380955:
+            if input[26] >= 0.5:
+                var83 = -0.046350647
+            else:
+                var83 = 0.0036158278
+        else:
+            if input[6] >= 0.5:
+                var83 = -0.16627549
+            else:
+                var83 = -0.001297727
+    else:
+        if input[4] >= 0.029761907:
+            var83 = 0.1653252
+        else:
+            var83 = 0.00082158623
+    if input[12] >= 0.5:
+        if input[3] >= 0.1:
+            if input[4] >= 0.30357143:
+                var84 = 0.1579134
+            else:
+                var84 = -0.044486895
+        else:
+            var84 = 0.1760457
+    else:
+        if input[26] >= 0.5:
+            if input[35] >= 0.5:
+                var84 = 0.13687477
+            else:
+                var84 = 0.018924544
+        else:
+            if input[4] >= 0.23214287:
+                var84 = 0.01044704
+            else:
+                var84 = -0.02405087
+    if input[6] >= 0.5:
+        if input[5] >= 0.5:
+            if input[4] >= 0.08928572:
+                var85 = -0.053651374
+            else:
+                var85 = 0.06073499
+        else:
+            if input[3] >= 0.5:
+                var85 = 0.2565224
+            else:
+                var85 = 0.016576625
+    else:
+        if input[4] >= 0.26785713:
+            if input[3] >= 0.9:
+                var85 = 0.042523734
+            else:
+                var85 = -0.031555068
+        else:
+            if input[4] >= 0.08928572:
+                var85 = 0.02376604
+            else:
+                var85 = -0.057065006
+    if input[33] >= 0.5:
+        if input[21] >= 0.5:
+            var86 = 0.12095778
+        else:
+            if input[3] >= 0.5:
+                var86 = -0.03654109
+            else:
+                var86 = 0.024055155
+    else:
+        if input[4] >= 0.18452382:
+            if input[17] >= 0.5:
+                var86 = -0.10266541
+            else:
+                var86 = -0.029493913
+        else:
+            if input[31] >= 0.5:
+                var86 = -0.10718766
+            else:
+                var86 = 0.013458573
+    if input[20] >= 0.5:
+        if input[4] >= 0.19642857:
+            if input[26] >= 0.5:
+                var87 = -0.20159534
+            else:
+                var87 = 0.009920998
+        else:
+            if input[3] >= 0.3:
+                var87 = 0.010100813
+            else:
+                var87 = 0.14806633
+    else:
+        if input[4] >= 0.23214287:
+            if input[31] >= 0.5:
+                var87 = -0.101427056
+            else:
+                var87 = 0.02182398
+        else:
+            if input[17] >= 0.5:
+                var87 = -0.10114683
+            else:
+                var87 = -0.0156225115
+    if input[0] >= 0.75:
+        if input[9] >= 0.5:
+            var88 = 0.15657154
+        else:
+            if input[21] >= 0.5:
+                var88 = -0.056147918
+            else:
+                var88 = 0.020146763
+    else:
+        if input[12] >= 0.5:
+            if input[0] >= 0.25:
+                var88 = -0.0045921924
+            else:
+                var88 = -0.15312316
+        else:
+            if input[4] >= 0.50595236:
+                var88 = 0.02774803
+            else:
+                var88 = -0.021692963
+    if input[4] >= 0.36309522:
+        if input[19] >= 0.5:
+            if input[3] >= 0.70000005:
+                var89 = 0.026118314
+            else:
+                var89 = -0.07650923
+        else:
+            if input[11] >= 0.5:
+                var89 = -0.099240586
+            else:
+                var89 = 0.03144267
+    else:
+        if input[0] >= 0.75:
+            if input[4] >= 0.31547618:
+                var89 = -0.12041556
+            else:
+                var89 = 0.0010677549
+        else:
+            if input[4] >= 0.19642857:
+                var89 = 0.053849626
+            else:
+                var89 = -0.0036018363
+    if input[31] >= 0.5:
+        if input[0] >= 0.75:
+            if input[4] >= 0.14880952:
+                var90 = -0.10116986
+            else:
+                var90 = 0.10071576
+        else:
+            if input[4] >= 0.11309524:
+                var90 = 0.16915339
+            else:
+                var90 = 0.007847817
+    else:
+        if input[4] >= 0.2797619:
+            if input[14] >= 0.5:
+                var90 = -0.007300608
+            else:
+                var90 = 0.047503695
+        else:
+            if input[2] >= 0.5:
+                var90 = -0.027653327
+            else:
+                var90 = 0.06707534
+    if input[20] >= 0.5:
+        if input[24] >= 0.5:
+            if input[3] >= 0.5:
+                var91 = 0.16343871
+            else:
+                var91 = 0.051096626
+        else:
+            if input[1] >= 0.5:
+                var91 = 0.050396904
+            else:
+                var91 = -0.04072455
+    else:
+        if input[4] >= 0.23214287:
+            if input[4] >= 0.24404761:
+                var91 = -0.0010516784
+            else:
+                var91 = 0.11946259
+        else:
+            if input[12] >= 0.5:
+                var91 = 0.03795721
+            else:
+                var91 = -0.03459141
+    if input[4] >= 0.375:
+        if input[32] >= 0.5:
+            if input[4] >= 0.57738096:
+                var92 = -0.20019405
+            else:
+                var92 = -0.044588335
+        else:
+            if input[35] >= 0.5:
+                var92 = 0.115049474
+            else:
+                var92 = -0.0156211695
+    else:
+        if input[1] >= 0.5:
+            if input[11] >= 0.5:
+                var92 = -0.05760823
+            else:
+                var92 = 0.0043064835
+        else:
+            if input[21] >= 0.5:
+                var92 = -0.07126879
+            else:
+                var92 = 0.041903567
+    if input[11] >= 0.5:
+        if input[4] >= 0.22023809:
+            if input[20] >= 0.5:
+                var93 = -0.025964668
+            else:
+                var93 = 0.09169114
+        else:
+            if input[3] >= 0.5:
+                var93 = -0.04628533
+            else:
+                var93 = 0.020797811
+    else:
+        if input[4] >= 0.5654762:
+            if input[14] >= 0.5:
+                var93 = 0.08905844
+            else:
+                var93 = 0.01523452
+        else:
+            if input[4] >= 0.5416666:
+                var93 = -0.1669953
+            else:
+                var93 = -0.016616894
+    if input[36] >= 0.5:
+        if input[1] >= 0.5:
+            if input[3] >= 0.70000005:
+                var94 = 0.11519061
+            else:
+                var94 = -0.041007377
+        else:
+            if input[7] >= 0.5:
+                var94 = -0.21555386
+            else:
+                var94 = -0.010916874
+    else:
+        if input[4] >= 0.05357143:
+            if input[1] >= 0.5:
+                var94 = 0.021515027
+            else:
+                var94 = -0.009138912
+        else:
+            if input[6] >= 0.5:
+                var94 = 0.0065730824
+            else:
+                var94 = -0.15212622
+    if input[3] >= 0.70000005:
+        if input[4] >= 0.4940476:
+            var95 = -0.145502
+        else:
+            if input[32] >= 0.5:
+                var95 = -0.08189548
+            else:
+                var95 = 0.00919577
+    else:
+        if input[21] >= 0.5:
+            if input[1] >= 0.5:
+                var95 = 0.024174633
+            else:
+                var95 = 0.1533979
+        else:
+            if input[4] >= 0.11309524:
+                var95 = 0.017326148
+            else:
+                var95 = -0.044506915
+    if input[36] >= 0.5:
+        if input[19] >= 0.5:
+            var96 = -0.0042390227
+        else:
+            if input[20] >= 0.5:
+                var96 = 0.02032657
+            else:
+                var96 = 0.17472602
+    else:
+        if input[25] >= 0.5:
+            if input[3] >= 0.3:
+                var96 = 0.11293909
+            else:
+                var96 = -0.007962148
+        else:
+            if input[2] >= 0.5:
+                var96 = -0.008986231
+            else:
+                var96 = -0.06802808
+    if input[6] >= 0.5:
+        if input[5] >= 0.5:
+            if input[1] >= 0.5:
+                var97 = 0.029101944
+            else:
+                var97 = 0.13550535
+        else:
+            if input[4] >= 0.077380955:
+                var97 = 0.06908802
+            else:
+                var97 = -0.09631954
+    else:
+        if input[17] >= 0.5:
+            if input[3] >= 0.70000005:
+                var97 = -0.03934537
+            else:
+                var97 = 0.06460401
+        else:
+            if input[4] >= 0.05357143:
+                var97 = -0.014107198
+            else:
+                var97 = 0.093511224
+    if input[4] >= 0.22023809:
+        if input[4] >= 0.4583333:
+            if input[5] >= 0.5:
+                var98 = 0.006207245
+            else:
+                var98 = 0.093089566
+        else:
+            if input[21] >= 0.5:
+                var98 = -0.1063988
+            else:
+                var98 = -0.01837128
+    else:
+        if input[24] >= 0.5:
+            if input[3] >= 0.70000005:
+                var98 = 0.07899213
+            else:
+                var98 = -0.07379527
+        else:
+            if input[4] >= 0.1607143:
+                var98 = 0.08313152
+            else:
+                var98 = 0.026377978
+    if input[20] >= 0.5:
+        if input[0] >= 0.25:
+            if input[4] >= 0.05357143:
+                var99 = -0.062012542
+            else:
+                var99 = 0.086322755
+        else:
+            if input[3] >= 0.9:
+                var99 = -0.09216886
+            else:
+                var99 = 0.061464023
+    else:
+        if input[4] >= 0.1607143:
+            if input[0] >= 0.75:
+                var99 = 0.058995407
+            else:
+                var99 = 0.014593758
+        else:
+            if input[21] >= 0.5:
+                var99 = 0.03887238
+            else:
+                var99 = -0.03661003
+    if input[4] >= 0.6130953:
+        if input[14] >= 0.5:
+            if input[4] >= 0.69642854:
+                var100 = 0.055927474
+            else:
+                var100 = -0.054239534
+        else:
+            if input[4] >= 0.6845238:
+                var100 = 0.06769213
+            else:
+                var100 = 0.17456567
+    else:
+        if input[4] >= 0.5178572:
+            if input[5] >= 0.5:
+                var100 = -0.10569734
+            else:
+                var100 = 0.030650204
+        else:
+            if input[4] >= 0.41071427:
+                var100 = 0.048346803
+            else:
+                var100 = -0.0048349774
+    var101 = sigmoid(var45 + var46 + var47 + var48 + var49 + var50 + var51 + var52 + var53 + var54 + var55 + var56 + var57 + var58 + var59 + var60 + var61 + var62 + var63 + var64 + var65 + var66 + var67 + var68 + var69 + var70 + var71 + var72 + var73 + var74 + var75 + var76 + var77 + var78 + var79 + var80 + var81 + var82 + var83 + var84 + var85 + var86 + var87 + var88 + var89 + var90 + var91 + var92 + var93 + var94 + var95 + var96 + var97 + var98 + var99 + var100)
+    return [1.0 - var101, var101]

@@ -1,0 +1,17 @@
+# This is the minimal config file for an NNI experiment.
+# Use "nnictl create --config config.yml" to launch this experiment.
+
+experimentName: Custom Model Hyperparameter Searching
+searchSpaceFile: search_space_custom.json
+trialCommand: python3 -m src.tuning.custom_trial_open
+trialCodeDirectory: ~/Documents/NN/crypto-forecasting/ # change this to your directory
+trialGpuNumber: 0
+trialConcurrency: 1
+maxTrialNumber: 1000
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: minimize
+trainingService:
+  platform: local
+  useActiveGpu: false

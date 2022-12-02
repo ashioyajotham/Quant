@@ -1,0 +1,105 @@
+{
+  "lr": {
+    "_type": "choice",
+    "_value": [
+      0.01,
+      0.005,
+      0.001,
+      0.0005
+    ]
+  },
+  "rnn_type": {
+    "_type": "choice",
+    "_value": [
+      "rnn",
+      "gru"
+    ]
+  },
+  "rnn_hidden_size": {
+    "_type": "choice",
+    "_value": [
+      8,
+      16,
+      24
+    ]
+  },
+  "ind_hidden_size": {
+    "_type": "choice",
+    "_value": [
+      1,
+      2,
+      4
+    ]
+  },
+  "des_size": {
+    "_type": "choice",
+    "_value": [
+      2,
+      4,
+      8,
+      16
+    ]
+  },
+  "ind1": {
+    "_type": "choice",
+    "_value": [
+      {
+        "_name": "ao",
+        "fast": {"_type": "choice", "_value": [3, 5, 7, 9]},
+        "slow": {"_type": "choice", "_value": [14, 20, 40]}
+      },
+      {
+        "_name": "apo",
+        "fast": {"_type": "choice", "_value": [3, 5, 7, 9]},
+        "slow": {"_type": "choice", "_value": [14, 20, 40]}
+      },
+      {
+        "_name": "cci",
+        "length": {"_type": "choice", "_value": [5, 10, 20]}
+      },
+      {
+        "_name": "cmo",
+        "length": {"_type": "choice", "_value": [5, 10, 20]}
+      },
+      {
+        "_name": "mom",
+        "length": {"_type": "choice", "_value": [5, 10, 20]}
+      },
+      {
+        "_name": "rsi",
+        "length": {"_type": "choice", "_value": [5, 10, 20]}
+      }
+    ]
+  },
+  "ind2": {
+    "_type": "choice",
+    "_value": [
+      {
+        "_name": "ao",
+        "fast": {"_type": "choice", "_value": [3, 5, 7, 9]},
+        "slow": {"_type": "choice", "_value": [14, 20, 40]}
+      },
+      {
+        "_name": "apo",
+        "fast": {"_type": "choice", "_value": [3, 5, 7, 9]},
+        "slow": {"_type": "choice", "_value": [14, 20, 40]}
+      },
+      {
+        "_name": "cci",
+        "length": {"_type": "choice", "_value": [5, 10, 20]}
+      },
+      {
+        "_name": "cmo",
+        "length": {"_type": "choice", "_value": [5, 10, 20]}
+      },
+      {
+        "_name": "mom",
+        "length": {"_type": "choice", "_value": [5, 10, 20]}
+      },
+      {
+        "_name": "rsi",
+        "length": {"_type": "choice", "_value": [5, 10, 20]}
+      }
+    ]
+  }
+}
