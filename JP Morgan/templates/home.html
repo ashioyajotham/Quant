@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Home</h1>
+
+    <form action="/predict" method="post">
+        <label for="feature1">Open:</label>
+        <input type="text" id="feature1" name="feature1"><br>
+
+        <label for="feature2">High:</label>
+        <input type="text" id="feature2" name="feature2"><br>
+
+        <label for="feature3">Low:</label>
+        <input type="text" id="feature3" name="feature3"><br>
+
+        <label for="feature4">Close:</label>
+        <input type="text" id="feature4" name="feature4"><br>
+
+        <label for="feature5">Volume:</label>
+        <input type="text" id="feature5" name="feature5"><br>
+
+        <label for="feature6">Year:</label>
+        <input type="text" id="feature6" name="feature6"><br>
+
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
