@@ -81,7 +81,7 @@ if st.button('Thank you!'):
 
 # add image
 from PIL import Image
-image = Image.open('goldman.jpeg')
+image = Image.open('goldman_sachs_forecasting/goldman.jpeg')
 image = image.resize((300, 100))
 st.image(image, caption='Goldman Sachs', use_column_width=False)
 # resize
