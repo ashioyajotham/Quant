@@ -37,7 +37,7 @@ q = st.sidebar.number_input('q (MA)', min_value=0, max_value=5, value=1)
 # Create a function to get completely new data
 @st.cache_data
 def get_data(start, end):
-    df = pd.read_csv('The Goldman Sachs.csv')
+    df = pd.read_csv('goldman_sachs_forecasting/The Goldman Sachs.csv')
     df['Date'] = pd.to_datetime(df['Date'])
     df.set_index('Date', inplace=True)
     return df[start:end]
