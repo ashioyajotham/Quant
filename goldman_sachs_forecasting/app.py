@@ -16,7 +16,7 @@ st.markdown("""
 
 # Load the models
 import pickle
-arima_model = pickle.load(open('arima.pkl', 'rb'))
+arima_model = pickle.load(open('goldman_sachs_forecasting/arima.pkl', 'rb'))
 
 # Create the title
 st.title('Goldman Sachs Stock Price Forecasting App')
