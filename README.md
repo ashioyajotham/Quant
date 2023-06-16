@@ -23,6 +23,9 @@
 
 * [OG Code](https://datascience.aeolus.wsu.edu/nwaltz/crypto-forecasting)
 
+### Trading Algorithm
+(Research stage) - coming soon!
+
 ######### TODO
 * Web scraping using financial APIs like Yahoo API
 * Predictive modelling
