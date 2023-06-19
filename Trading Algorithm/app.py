@@ -1,6 +1,7 @@
 ## Objectives
   # incorporate sentiment analysis into automated trading systems
   # to evaluate whether a given headline was indicative of Good News, Bad News, or Unknown, also asking for a brief explanation
+  # USE finGPT LLM to built the algo + robo adviser
   
   """
   There Are Two Ways to Build Algorithmic Trading Systems.
