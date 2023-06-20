@@ -17,12 +17,16 @@ sys.path.append("C://Users//Administrator//FinRL") #
 import itertools
 import re
 from finrl import config
-from meta.preprocessor.preprocessors import FeatureEngineer
-from finrl.meta.preprocessor.preprocessors import data_split
-from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
+import itertools
 
-from finrl.agents.stablebaselines3.models import DRLAgent
+from finrl.config import config
+from finrl.marketdata.yahoodownloader import YahooDownloader
+from finrl.preprocessing.preprocessors import FeatureEngineer
+from finrl.preprocessing.data import data_split
+from finrl.env.env_stocktrading import StockTradingEnv
+from finrl.model.models import DRLAgent
+from finrl.trade.backtest import backtest_stats, backtest_plot, get_daily_return, get_baseline
+
 from finrl.plot import backtest_plot
 from finrl.plot import backtest_stats
 from finrl.plot import get_baseline
