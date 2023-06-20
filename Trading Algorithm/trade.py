@@ -23,8 +23,11 @@ from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
 from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
 
 from finrl.agents.stablebaselines3.models import DRLAgent
-from finrl.trade.backtest import backtest_stats, backtest_plot, get_daily_return, get_baseline,convert_daily_return_to_pyfolio_ts
-
+from finrl.plot import backtest_plot
+from finrl.plot import backtest_stats
+from finrl.plot import get_baseline
+from finrl.plot import get_daily_return
+from finrl.plot import plot_return
 from pprint import pprint
 
 import argparse
