@@ -5,7 +5,6 @@
   
   """
   There Are Two Ways to Build Algorithmic Trading Systems.
-(Pro tip: If you don't want to wait until tomorrow for the next lesson, click the link at the bottom to get the next lesson in your inbox right away!)
 
 # i) The first is data mining.
 
