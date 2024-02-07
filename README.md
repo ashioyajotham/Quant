@@ -30,5 +30,8 @@
 * Web scraping using financial APIs like Yahoo API
 * Predictive modelling
 
+* ![image](https://github.com/ashioyajotham/Quant/assets/71454095/84af999b-dd12-4e8d-a698-2ba1039dd66a)
+
+
 
 ![Sample](https://github.com/ashioyajotham/FInancial-Analysis/blob/main/doge.jpg)
