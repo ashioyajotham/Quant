@@ -26,7 +26,9 @@ def extract_discount(discount_str):
         return 0.0
 
 # Apply the function to create a new 'Discount Value' column
-data['Discount Percentage'] = data['Discounts and Offers'].apply(lambda x: extract_discount(x))
+#data['Discount Percentage'] = data['Discounts and Offers'].apply(lambda x: extract_discount(x))
+# The above line returns a TypeError: argument of type 'float' is not iterable so we have to use the below code
+data['Discount Percentage'] = data['Discounts and Offers'].apply(lambda x: extract_discount(x) if type(x) == str else 0.0)
 
 # For percentage discounts, calculate the discount amount based on the order value
 data['Discount Amount'] = data.apply(lambda x: (x['Order Value'] * x['Discount Percentage'] / 100)
