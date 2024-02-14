@@ -19,12 +19,12 @@ def extract_discount(discount_str):
          # Fixed amount off
         return float(discount_str.split(' ')[0])
     elif '%' in discount_str:
-#         # Percentage off
+         # Percentage off
 
        return float(discount_str.split('%')[0])
 
     else:
-#         # No discount
+         # No discount
         return 0.0
 
 # Apply the function to create a new 'Discount Value' column
@@ -107,14 +107,9 @@ data['Simulated Discount Amount'] = data['Order Value'] * (recommended_discount_
 
 # Recalculate total costs and profit with simulated values
 data['Simulated Total Costs'] = (data['Delivery Fee'] + data['Payment Processing Fee'] + data['Simulated Discount Amount'])
+data['Simulated Profit'] = (data['Simulated Commission Fee'] - data['Simulated Total Costs'])
 
-# data['Simulated Profit'] = (data['Simulated Commission Fee'] - data['Simulated Total Costs'])
-
-# # Visualizing the comparison
-# st.subheader('Comparison of Profitability: Actual vs. Recommended Discounts and Commissions')
-# st.pyplot(sns.kdeplot(data['Profit'], label='Actual Profitability', fill=True, alpha=0.5, linewidth=2))
-# st.pyplot(sns.kdeplot(data['Simulated Profit'], label='Estimated Profitability with Recommended Rates', fill=True, alpha=0.5, linewidth=2))
-
-# # Step 3: Run the Streamlit app
-# !streamlit run app.py
-# The above code creates a Streamlit app that displays the overall metrics, profit distribution, costs breakdown, and profitability comparison. You can run the app by executing the command !streamlit run app.py in a code cell.
+# Visualizing the comparison
+st.subheader('Comparison of Profitability: Actual vs. Recommended Discounts and Commissions')
+st.pyplot(sns.kdeplot(data['Profit'], label='Actual Profitability', fill=True, alpha=0.5, linewidth=2))
+st.pyplot(sns.kdeplot(data['Simulated Profit'], label='Estimated Profitability with Recommended Rates', fill=True, alpha=0.5, linewidth=2))
