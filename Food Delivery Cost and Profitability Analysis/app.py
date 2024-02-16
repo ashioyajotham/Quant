@@ -69,14 +69,14 @@ st.write(overall_metrics)
 # Histogram of profits per order
 st.subheader('Profit Distribution per Order')
 f, ax = plt.subplots(figsize=(10, 6))
-ax.pyplot(plt.hist(data['Profit'], bins=50, color='skyblue', edgecolor='black'))
+ax.hist(data['Profit'], bins=50, color='skyblue', edgecolor='black')
 st.pyplot(f)
 
 # Pie chart for the proportion of total costs
 costs_breakdown = data[['Delivery Fee', 'Payment Processing Fee', 'Discount Amount']].sum()
 st.subheader('Proportion of Total Costs')
 f, ax = plt.subplots()
-ax.pyplot(plt.pie(costs_breakdown, labels=costs_breakdown.index, autopct='%1.1f%%', startangle=140, colors=['tomato', 'gold', 'lightblue']))
+ax.pie(costs_breakdown, labels=costs_breakdown.index, autopct='%1.1f%%', startangle=140, colors=['tomato', 'gold', 'lightblue'])
 st.pyplot(f)
 
 # Bar chart for total revenue, costs, and profit
@@ -84,7 +84,7 @@ totals = ['Total Revenue', 'Total Costs', 'Total Profit']
 values = [total_revenue, total_costs, total_profit]
 st.subheader('Total Revenue, Costs, and Profit')
 f, ax = plt.subplots()
-ax.pyplot(plt.bar(totals, values, color=['green', 'red', 'blue']))
+ax.bar(totals, values, color=['green', 'red', 'blue'])
 st.pyplot(f)
 
 # Filter the dataset for profitable orders
