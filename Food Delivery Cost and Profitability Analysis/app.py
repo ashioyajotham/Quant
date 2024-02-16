@@ -117,5 +117,10 @@ data['Simulated Profit'] = (data['Simulated Commission Fee'] - data['Simulated T
 
 # Visualizing the comparison
 st.subheader('Comparison of Profitability: Actual vs. Recommended Discounts and Commissions')
-st.pyplot(sns.kdeplot(data['Profit'], label='Actual Profitability', fill=True, alpha=0.5, linewidth=2))
-st.pyplot(sns.kdeplot(data['Simulated Profit'], label='Estimated Profitability with Recommended Rates', fill=True, alpha=0.5, linewidth=2))
+f, ax = plt.subplots(figsize=(10, 6))
+sns.kdeplot(data['Profit'], label='Actual Profitability', fill=True, alpha=0.5, linewidth=2)
+sns.kdeplot(data['Simulated Profit'], label='Estimated Profitability with Recommended Rates', fill=True, alpha=0.5, linewidth=2)
+plt.xlabel('Profit')
+plt.ylabel('Density')
+plt.legend()
+st.pyplot(f)
